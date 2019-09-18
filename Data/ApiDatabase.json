@@ -1560,6 +1560,13 @@
       "area": "Memory",
       "problem": "The property TestTools.UnityPlatformAttribute.exclude allocates managed memory.",
       "solution": "Try to avoid getting this property in frequently-updated code. Ideally, this property should only be used during initialisation, and the results should be cached if they need to be re-used."
+    },
+    {
+      "type": "System.Threading",
+      "method": "*",
+      "area": "CPU",
+      "problem": "Multi-threading is not currently supported on Unity WebGL.",
+      "solution": "Remove code which relies on Multi-threading when building for Unity WebGL."
     }
   ]
 }
